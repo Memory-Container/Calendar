@@ -1,0 +1,155 @@
+.icon {
+    --width: 18px;
+    --icon-url: url("/");
+    --bg-color: #5e5e5e;
+    width: var(--width);
+    height: var(--width);
+    background-color: var(--bg-color);
+    -webkit-mask: var(--icon-url) no-repeat center;
+    mask: var(--icon-url) no-repeat center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    transition: 0.3s;
+}
+.icon-lg {
+    --width: 24px;
+}
+.icon-sm {
+    --width: 12px;
+}
+.all {
+    --icon-url: url(/assets/svg/all.svg)
+}
+.cart {
+    --icon-url: url(/assets/svg/cart.svg)
+}
+.clock {
+    --icon-url: url(/assets/svg/clock.svg)
+}
+.check {
+    --icon-url: url(/assets/svg/check.svg)
+}
+.chevron-right {
+    cursor: pointer;
+    --icon-url: url(/assets/svg/chevron-right.svg);
+}
+.chevron-down {
+    cursor: pointer;
+    --icon-url: url(/assets/svg/chevron-right.svg);
+    rotate: 90deg;
+}
+.chevron-up {
+    cursor: pointer;
+    --icon-url: url(/assets/svg/chevron-right.svg);
+    rotate: calc(90deg + 180deg);
+}
+.copy {
+    --icon-url: url(/assets/svg/copy.svg)
+}
+.cube {
+    --icon-url: url(/assets/svg/cube.svg)
+}
+.file {
+    --icon-url: url(/assets/svg/file.svg)
+}
+.fire {
+    --icon-url: url(/assets/svg/fire.svg)
+}
+.gear {
+    --icon-url: url(/assets/svg/gear.svg)
+}
+.hamburger {
+    --icon-url: url(/assets/svg/hamburger.svg)
+}
+.heart {
+    --icon-url: url(/assets/svg/heart.svg)
+}
+.home {
+    --icon-url: url(/assets/svg/home.svg)
+}
+.link {
+    --icon-url: url(/assets/svg/link.svg)
+}
+.news {
+    --icon-url: url(/assets/svg/news.svg)
+}
+.person {
+    --icon-url: url(/assets/svg/person.svg)
+}
+.rocket {
+    --icon-url: url(/assets/svg/rocket.svg)
+}
+.stack {
+    --icon-url: url(/assets/svg/stack.svg)
+}
+.star {
+    --icon-url: url(/assets/svg/star.svg)
+}
+.truck {
+    --icon-url: url(/assets/svg/truck.svg)
+}
+.wrench {
+    --icon-url: url(/assets/svg/wrench.svg)
+}
+.slash {
+    --icon-url: url(/assets/svg/slash.svg)
+}
+.line {
+    --icon-url: url(/assets/svg/line.svg)
+}
+.trash {
+    --icon-url: url(/assets/svg/trashcan.svg)
+}
+.arrow {
+    --icon-url: url(/assets/svg/arrow.svg)
+}
+.dot3 {
+    --icon-url: url(/assets/svg/3dot.svg)
+}
+.calendar {
+    --icon-url: url(/assets/svg/calendar.svg)
+}
+.placeholdder {
+    --icon-url: url(/assets/svg/Vector.svg)
+}
+.filter {
+    --icon-url: url(/assets/svg/filter.svg)
+}
+.map-pin {
+    --icon-url: url(/assets/svg/map-pin.svg)
+}
+.plus {
+    --icon-url: url(/assets/svg/plus.svg)
+}
+.bookmark {
+    --icon-url: url(/assets/svg/bookmark.svg)
+}
+.pen {
+    --icon-url: url(/assets/svg/pen.svg)
+}
+.x {
+    --icon-url: url(/assets/svg/x.svg)
+}
+.triangle-left {
+    width: 18px;
+    height: 14px;
+    --icon-url: url(/assets/svg/triangle.svg);
+    rotate: -90deg;
+    cursor: pointer;
+}
+.triangle-right {
+    width: 18px;
+    height: 14px;
+    --icon-url: url(/assets/svg/triangle.svg);
+    rotate: 90deg;
+    cursor: pointer;
+}
+.flip {
+    rotate: 180deg;
+}
+.black {
+    background-color: rgb(27, 27, 27);
+}
+.gray {
+    color: #8b8b8b;
+}

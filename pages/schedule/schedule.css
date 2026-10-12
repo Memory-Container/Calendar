@@ -1,0 +1,327 @@
+
+main {
+    height: 100%;
+}
+.section1 {
+    position: relative;
+    height: 100%;
+    z-index: -1;
+}
+.section1 .container {
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    position: relative;
+    z-index: -1;
+}
+.side-nav {
+    width: 15%;
+    min-width: 220px;
+    max-width: 400px;
+    width: min-content;
+    background-color: rgb(246 246 246);
+    box-shadow: 5px 0px 5px var(--shadow-default), -5px 0px 5px var(--shadow-default);
+    display: flex;
+    align-items: flex-start;
+    overflow: none;
+    height: 100vh;
+    z-index: 9;
+}
+.new-event {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+}
+.create-options {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+.create-choice {
+    font-size: 15px;
+    opacity: 0.5;
+    padding: 8px 16px;
+    border-bottom: 2px solid black;
+    transition: 0.25s;
+    font-weight: 600;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+}
+.create-choice:hover {
+    background-color: rgba(128, 128, 128, 0.245);
+}
+.create-choice.active {
+    opacity: 1;
+    border-width: 2px;
+    border-color: var(--accent);
+    color: var(--accent);
+}
+i {
+    font-size: 0.9rem;
+    margin-right: 0.4rem;
+    height: 100%;
+}
+.new-event:hover {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    background-color: color-mix(in srgb, white 100%, black 7%);
+}
+.filter-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.filter-type:hover {
+    background-color: rgb(205, 205, 205);
+}
+.filter-type {
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.content-label {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 15px;
+    transition: 0.3s;
+    gap: 5px;
+    font-size: 15px;
+    line-height: 16px;
+    justify-content: space-between;
+}
+.content-label .mode {
+    width: 80%;
+}
+.content-label input, .content-label textarea {
+    height: 25px;
+    outline: none;
+    border: 0;
+    width: 80%;
+    padding: 10px;
+}
+.content-label textarea {
+    resize: none;
+    height: 100px;
+    width: 80%;
+}
+.content-label input[type="datetime-local"] {
+    padding: 5px;
+    font-size: 12px;
+    width: min-content;
+}
+input:focus {
+    outline: none;
+}
+label.title {
+    gap: 5px;
+    color: #000000a8;
+}
+label.tag {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 15px;
+    transition: 0.3s;
+    gap: 10px;
+    font-size: 15px;
+    line-height: 16px;
+}
+label.tag:hover {
+    background-color: rgb(210, 210, 210);
+}
+.btn-new {
+    padding: 2px 4px;
+    border: 0;
+    background-color: transparent;
+    font-size: 15px;
+}
+table.calendar {
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    border-spacing: 0;
+}
+.calendar-row {
+    height: 28px;
+    position: relative;
+    z-index: 0;
+}
+.days {
+    font-size: 10px;
+    font-weight: 500;
+    vertical-align: middle;
+    color: rgb(31, 31, 31);
+    cursor: pointer;
+}
+.circle {
+    display: grid;
+    font-size: 10px;
+    place-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(0, 35, 104, 0);
+    border-radius: 50%;
+    border: 0;
+    transition: 0.2s;
+    letter-spacing: 1px;
+    padding: 0;
+    position: relative;
+}
+.circle.availableTask::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgb(255, 106, 0);
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.days:hover .circle {
+    background-color: color-mix(in srgb,var(--accent) 100%, rgb(255, 255, 255) 100%);
+}
+.circle.active {
+    background-color: color-mix(in srgb,var(--accent) 100%, rgb(100, 255, 247) 100%);
+}
+.circle.active:hover {
+    background-color: color-mix(in srgb,var(--accent) 100%, rgb(100, 255, 247) 100%);
+}
+.schedule {
+    width: 100%;
+    border-bottom: 0px;
+    overflow-x: scroll;
+    background-color: white;
+    width: 100vw;
+    padding: 0 5px;
+}
+.schedule .schedule-container {
+    position: relative;
+    display: flex;
+    height: 100%;
+}
+.schedule-container .cell {
+    flex: 1;
+    min-width: 250px;
+    height: 100%;
+    border-left: 2px solid rgb(79, 79, 79);
+    max-width: 250px;
+}
+.cell .date {
+    padding: 10px 3px 1px 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(56, 56, 56);
+    border-bottom: 4px solid rgb(60, 60, 60);
+    letter-spacing: 1px;
+}
+.cell .task-container {
+    padding: 5px 4px 2px 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.task-container .task {
+    --color: var(--accent);
+    color: rgb(36, 36, 36);
+    border: 2px solid var(--color);
+    width: 100%;
+    padding: 9px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(to right, var(--color) 1%, transparent 1%);
+    transition: 0.3s;
+}
+.task-container .task.in-progress {
+    --color: #ffd30a;
+    border: 1px solid var(--color);
+}
+.task-container .task.canceled {
+    --color: rgb(202, 0, 0);
+    border: 1px solid var(--color);
+}
+.task-container .task.completed {
+    --color: rgb(12, 173, 0);
+    border: 1px solid var(--color);
+}
+.task-container .task .data.status {
+    color: var(--color) !important;
+    filter: contrast(0.7);
+}
+.task-container .task hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid var(--color);
+}
+.task.compact {
+    color: rgb(0, 0, 0);
+    height: 34px;
+    overflow: hidden;
+    background: linear-gradient(to right, var(--color) 100%, transparent 100%);
+}
+.task .task-name {
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+.task-name i {
+    margin: 0;
+}
+.task table {
+    width: 100%;
+    font-size: 13px;
+}
+table {
+    width: 100%;
+}
+table tr {
+    height: 20px;
+}
+table td.data {
+    font-weight: 600;
+    color: rgb(39, 39, 39);
+}
+.count {
+    --color: #fff;
+    color: var(--color);
+
+}
+.count.in-progress {
+    --color: #c4a000;
+}
+.count.completed {
+    --color: rgb(12, 173, 0);
+}
+.count.canceled {
+    --color: rgb(202, 0, 0);
+}
+.empty-text {
+    position: relative; justify-self: center;top: 45%; opacity: 0.4; font-size: 36px
+}

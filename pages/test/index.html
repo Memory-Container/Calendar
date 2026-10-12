@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Giver | Schedule</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="../../shared/css/utils.css">
+    <link rel="stylesheet" href="../../shared/css/icon.css">
+    <link rel="stylesheet" href="../../shared/css/modal.css">
+    <link rel="stylesheet" href="calendar.css">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="node.css">
+    <link rel="stylesheet" href="panel.css">
+</head>
+<body class="d-flex flex-row">
+    <side style="min-height: 100vh; width: 50px;" class="bg-white border-right-1 border-muted d-flex flex-col align-items-center gap-3 pt-2 pb-1">
+        <div class="user-profile bg-black border-radius-circle p-3">
+
+        </div>
+        <div class="d-flex flex-col justify-content-between align-items-center h-100 w-100">
+            <div class="d-flex flex-col width-100 align-items-center w-100">
+                <button class="flex-1 d-flex align-items-center border-0 teleporter" data-target="home">
+                    <div class="icon home" style="--width: 24px"></div>
+                </button>
+                <button class="flex-1 d-flex align-items-center border-0 teleporter" data-target="calendar">
+                    <div class="icon calendar" style="--width: 24px"></div>   
+                </button>
+            </div>
+            <div class="d-flex flex-col width-100 align-items-center w-100">
+                <button class="flex-1 d-flex border-0 align-items-center teleporter" data-target="tasks">
+                    <div class="icon gear" style="--width: 24px"></div>
+                </button>
+            </div>
+        </div>
+    </side>
+    <main class="d-flex flex-row flex-1">
+        <section class="col-3 bg-light d-flex flex-col shadow-right border-right-1 border-muted">
+            <header class=" bg-white pos-relative top-0 d-flex flex-row justify-content-between align-items-center border-bottom-1 border-muted px-3 py-2 ">
+                <div class="text-uppercase fs-2 fb">
+                    Lịch trình
+                </div>
+                <div class="d-flex flex-row gap-2">
+                    <button class="p-1 border-1 border-muted d-flex align-items-center btn">
+                        <div class="icon filter"></div>
+                    </button>
+                    <button class="p-1 border-1 border-muted d-flex align-items-center btn">
+                        <div class="icon plus"></div>
+                    </button>
+                    <button class="p-1 px-2 border-1 border-muted d-flex gap-2 align-items-center btn">
+                        <div class="icon calendar"></div>
+                        <span class="fs-1" id="calendar-date">22/12/2024</span>
+                    </button>
+                </div>
+            </header>
+            <div class="d-flex flex-col" id="task-panel">
+                <div class="date-group">
+                    <div class="date-header">
+                        <div class="d-flex gap-2 align-items-center justify-content-center">
+                            <div class="date-tag bg-black text-white fs-1 text-uppercase fb px-2 py-1 rounded">
+                                Hôm nay
+                            </div>
+                            <div class="fs-1 text-muted">
+                                12/12/2024
+                            </div>
+                        </div>
+                        <div class="text-muted fs-1 d-flex align-items-center">
+                            0/3
+                        </div>
+                    </div>
+                    <div class="date-task">
+                        <div class="task">
+                            <div class="marker bg-info"></div>
+                            <div class="task-time text-muted fs-2">
+                                8:00
+                            </div>
+                            <div class="task-content d-flex flex-col gap-1">
+                                <div class="task-name fs-2 fb text-truncate">
+                                    Học bài
+                                </div>
+                                <div class="task-desc text-muted fs-1 line-clamp-1">
+                                    Học bài môn Toán, làm bài tập trang 12 3545423542354235423542354
+                                </div>
+                            </div>
+                            <div class="icon icon-sm chevron-right bg-muted"></div>
+                        </div>
+                        <div class="task">
+                            <div class="marker bg-warning"></div>
+                            <div class="task-time text-muted fs-2">
+                                9:00
+                            </div>
+                            <div class="task-content d-flex flex-col gap-1">
+                                <div class="task-name fs-2 fb text-truncate">
+                                    TASK 1
+                                </div>
+                                <div class="task-desc text-muted fs-1 line-clamp-1">
+                                    Học bài môn Toán, làm bài tập trang 12
+                                </div>
+                            </div>
+                            <div class="icon icon-sm chevron-right bg-muted"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="date-group">
+                    <div class="date-header">
+                        <div class="d-flex gap-2 align-items-center justify-content-center">
+                            <div class="date-tag bg-light-gray text-muted fs-1 text-uppercase fb px-2 py-1 rounded">
+                                Ngày mai
+                            </div>
+                            <div class="fs-1 text-muted">
+                                13/12/2024
+                            </div>
+                        </div>
+                        <div class="text-muted fs-1 d-flex align-items-center">
+                            0/3
+                        </div>
+                    </div>
+                    <div class="date-task">
+                        <div class="task">
+                            <div class="marker bg-gray"></div>
+                            <div class="task-time text-muted fs-2">
+                                8:00
+                            </div>
+                            <div class="task-content d-flex flex-col gap-1">
+                                <div class="task-name fs-2 fb text-truncate">
+                                    Học bài
+                                </div>
+                                <div class="task-desc text-muted fs-1 line-clamp-1">
+                                    Học bài môn Toán, làm bài tập trang 12 3545423542354235423542354
+                                </div>
+                            </div>
+                            <div class="icon icon-sm chevron-right bg-muted"></div>
+                        </div>
+                        <div class="task task-active">
+                            <div class="marker bg-success"></div>
+                            <div class="task-time text-muted fs-2">
+                                9:00
+                            </div>
+                            <div class="task-content d-flex flex-col gap-1">
+                                <div class="task-name fs-2 fb text-truncate">
+                                    Học bài
+                                </div>
+                                <div class="task-desc text-muted fs-1 line-clamp-1">
+                                    Học bài môn Toán, làm bài tập trang 12
+                                </div>
+                            </div>
+                            <div class="icon icon-sm chevron-right bg-muted"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pos-relative col-9 d-flex flex-col h-100vh">
+            <div class="col-12 flex-1 d-flex flex-col gap-3 p-3 overflow-auto">
+                <div class="panel-group">
+                    <div class="panel d-flex flex-col gap-2">
+                        <div class="d-flex flex-row gap-2 align-items-center">
+                            <div class="fs-4 fb text-uppercase">
+                                Task 1
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row gap-2 align-items-center">
+                            <div class="d-flex flex-row gap-1">
+                                <div class="border-1 p-1 rounded">
+                                    <div class="icon icon-sm bookmark"></div>
+                                </div>
+                                <div class="tag tag-sm tag-info">
+                                    <div class="icon icon-sm calendar"></div>
+                                    <span>Đang thực hiện</span>
+                                </div>
+                                <div class="tag tag-sm tag-warning">
+                                    <div class="icon icon-sm calendar"></div>
+                                    <span>Quá hạn</span>
+                                </div>
+                                <div class="tag tag-sm">
+                                    <div class="icon icon-sm calendar"></div>
+                                    <span>Chưa bắt đầu</span>
+                                </div>
+                                <div class="tag tag-sm tag-success">
+                                    <div class="icon icon-sm calendar"></div>
+                                    <span>Đã hoàn thành</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fs-1 text-muted line-clamp-5">
+                            Description Text 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.                        Description Text 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.                        Description Text 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.                        Description Text 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.                        Description Text 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group">
+                    <div class="panel flex-1 p-0">
+                        <div class="panel-header">
+                            <span>
+                                Checklist <span>(0/3)</span>
+                            </span>
+                        </div>
+                        <div class="panel-content">
+                            <label class="d-flex flex-row gap-2 align-items-center">
+                                <input type="checkbox">
+                                <span>Task 1</span>
+                            </label>
+                            <label class="d-flex flex-row gap-2 align-items-center">
+                                <input type="checkbox">
+                                <span>Task 1</span>
+                            </label>
+                            <label class="d-flex flex-row gap-2 align-items-center">
+                                <input type="checkbox">
+                                <span>Task 1</span>
+                            </label>
+                            <label class="d-flex flex-row gap-2 align-items-center">
+                                <input type="checkbox">
+                                <span>Task 1</span>
+                            </label>
+                            <label class="d-flex flex-row gap-2 align-items-center">
+                                <input type="checkbox">
+                                <span>Task 1</span>
+                            </label>
+                            <label class="d-flex flex-row gap-2 align-items-center">
+                                <input type="checkbox">
+                                <span>Task 1</span>
+                            </label>
+                            <label class="d-flex flex-row gap-2 align-items-center">
+                                <input type="checkbox">
+                                <span>Task 1</span>
+                            </label>
+                            <label class="d-flex flex-row gap-2 align-items-center">
+                                <input type="checkbox">
+                                <span>Task 1</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="panel flex-1 p-0">
+                        <div class="panel-header">
+                            Mô tả chi tiết
+                        </div>
+                        <div class="panel-content fs-2">
+                            ← Mô tả chi tiết cho từng checklist item
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group">
+                    <div class="panel p-0 w-100">
+                        <div class="panel-header">
+                            Mốc thời gian
+                        </div>
+                        <div class="panel-content d-flex flex-col gap-2">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-group">
+                    <div class="panel flex-1 p-0">
+                        <div class="panel-header">
+                            Ghi chú
+                        </div>
+                        <div class="panel-content d-flex flex-col gap-3 p-0 border-radius-5">
+                            <textarea class="form-control" rows="5" placeholder="Thêm ghi chú..."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 bg-white p-2 d-flex justify-content-between border-top-1 border-muted">
+                <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-dark-outline">
+                        <div class="icon pen"></div>
+                        Chỉnh sửa
+                    </button>
+                    <button class="btn btn-sm btn-success-outline">
+                        <div class="icon check"></div>
+                        Hoàn thành
+                    </button>
+                </div>
+                <button class="btn btn-sm btn-warning-outline">
+                    <div class="icon trash"></div>
+                    Xóa
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="/shared/js/new-modal.js"></script>
+<script src="/shared/js/utils.js"></script>
+<script src="test.js"></script>
+<script src="calendar.js"></script>
+</html>

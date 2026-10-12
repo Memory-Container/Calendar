@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Giver | Schedule</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="schedule.css">
+    <link rel="stylesheet" href="../../shared/css/utils.css">
+    <link rel="stylesheet" href="../../shared/css/sidenav.css">
+    <link rel="stylesheet" href="../../shared/css/modal.css">
+    <link rel="stylesheet" href="taskModal.css">
+</head>
+<body>
+    <main>
+        <section class="section1">
+            <div class="container">
+                <aside class="side-nav">
+                </aside>
+                <div class="schedule">
+                    <div class="schedule-container">
+                    </div>
+                </div>
+                <div class="nav-hamburger" onclick="closeSideNav()">
+                    ☰
+                </div>
+                <aside class="side-nav">
+                    <div class="nav-container">
+                        <!-- <h3>Tổng quan lịch trình</h3>
+                        <hr>
+                        <table>
+                            <tr>
+                                <td class="count completed">1</td>
+                                <td>Đã hoàn thành</td>
+                            </tr>
+                            <tr>
+                                <td class="count in-progress">1</td>
+                                <td>Đang hoàn thành</td>
+                            </tr>
+                            <tr>
+                                <td class="count canceled">0</td>
+                                <td>Bị hủy</td>
+                            </tr>
+                        </table>
+                        <h3>Hiển thị</h3>
+                        <hr>
+                        <div style="display: flex; flex-direction: column; gap: 5px;">
+                            <label class="flex-r"><input type="checkbox" checked> Đã hoàn thành</label>
+                            <label class="flex-r"><input type="checkbox" checked> Đang hoàn thành</label>
+                            <label class="flex-r"><input type="checkbox" checked> Bị hủy</label>
+                        </div> -->
+                        <div class="nav-section">
+                            <div>
+                                <h3>Tổng Quan</h3>
+                                <hr>
+                                <div class="overview">
+                                    <table>
+                                        <tr>
+                                            <td>Đã hoàn thành</td>
+                                            <td class="count completed">1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Đang hoàn thành</td>
+                                            <td class="count in-progress">1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bị hủy</td>
+                                            <td class="count canceled">0</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div>
+                                <h3>Hiển thị</h3>
+                                <hr>
+                                <div style="display: flex; flex-direction: column; gap: 5px">
+                                    <label class="flex-r">
+                                        <input type="checkbox" checked>
+                                        Đã hoàn thành
+                                    </label>
+                                    <label class="flex-r">
+                                        <input type="checkbox" checked>
+                                        Đang hoàn thành
+                                    </label>
+                                    <label class="flex-r">
+                                        <input type="checkbox" checked>
+                                        Bị hủy
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <h3>Thời gian hiển thị</h3>
+                                <hr>
+                                <div style="display: flex; flex-direction: column; gap: 5px">
+                                    <label class="flex-r">
+                                        <input class="display-mode" type="radio" name="display-mode" id="3days">
+                                        Trong 3 ngày
+                                    </label>
+                                    <label class="flex-r">
+                                        <input class="display-mode" type="radio" name="display-mode" id="week">
+                                        Trong tuần
+                                    </label>
+                                    <label class="flex-r">
+                                        <input class="display-mode" type="radio" name="display-mode" id="month" checked>
+                                        Trong tháng
+                                    </label>
+                                    <label class="flex-r">
+                                        <input class="display-mode" type="radio" name="display-mode" id="all" checked>
+                                        Tất cả
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="../../shared/js/utils.js"></script>
+<script src="../../shared/js/layout.js"></script>
+<script src="../../shared/js/modal.js"></script>
+<script src="scheduleUtilities.js"></script>
+<script src="schedule.js"></script>
+</html>

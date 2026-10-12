@@ -1,0 +1,53 @@
+.node, .node-small {
+    width: 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.node::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: 3px solid rgb(57, 57, 57);
+    border-radius: 50%;
+}
+.node-small::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 9px;
+    height: 9px;
+    background-color: white;
+    border: 2px solid rgb(83, 83, 83);
+    border-radius: 50%;
+}
+.node::after, .node-small::before {
+    z-index: -9;
+    content: "";
+    width: 2px;
+    height: 150%;
+    position: absolute;
+    bottom: 50%;
+    background-color: rgb(151, 151, 151);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.node-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.node-time {
+    letter-spacing: 1px;
+    font-size: 15px;
+}

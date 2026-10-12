@@ -1,0 +1,126 @@
+.side-nav {
+    width: 15%;
+    min-width: 220px;
+    max-width: 400px;
+    background-color: rgb(246 246 246);
+    box-shadow: 5px 0px 5px var(--shadow-default), -5px 0px 5px var(--shadow-default);
+    display: flex;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 15px 15px;
+    z-index: 9;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+}
+.side-nav.hide {
+    min-width: 0px;
+    width: 0%;
+    padding: 15px 0;
+}
+.nav-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: calc(100% - 30px);
+    min-width: calc(220px - 30px);
+    max-width: calc(400px - 30px);
+}
+.nav-container .links-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 5px;
+}
+.nav-container .nav-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.nav-hamburger {
+    position: absolute;
+    top: 10px;
+    right: 230px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0.8rem;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    background-color: var(--bg-default);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.nav-hamburger:hover {
+    filter: brightness(0.9);
+}
+.nav-hamburger.hide {
+    right: 10px;
+}
+.links-section .link {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000a8;
+    text-align: left;
+    align-self: flex-end;
+    padding: 6px 9px;
+    border-radius: 5px;
+    transition: 0.5s;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+.links-section .link.active, .links-section .link:hover {
+    background-color: rgba(0, 0, 0, 0.097);
+    filter: brightness(1.2)
+}
+.nav-container .user-profile {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.user-profile .user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+.user-profile .user-info .user-name {
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+.user-profile .user-info .user-gmail {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: rgb(39, 39, 39);
+    display: flex;
+    align-items: center;
+}
+.user-profile .user-img {
+    --url: url(/assets/members/cca8ee01ef6e0bc6525cf22f52fff53e.png);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgb(79, 79, 79);
+    background: var(--url);
+    background-size: contain;
+    background-position: center;
+}
+.group-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
+#schedule-utilities {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
